@@ -1,17 +1,5 @@
 package example.myapp
 
-//abstract class AquariumFish {
-//    abstract val color: String
-//}
-
-//class Shark: AquariumFish() {
-//    override val color = "gray"
-//}
-
-//class Plecostomus: AquariumFish() {
-//    override val color = "gold"
-//}
-
 interface FishColor {
     val color: String
 
@@ -35,7 +23,7 @@ object GoldColor : FishColor {
     override val color = "gold"
 }
 
-class PrintingFishAction(val food: String) : FishAction {
+class PrintingFishAction(private val food: String) : FishAction {
     override fun eat() {
         println(food)
     }

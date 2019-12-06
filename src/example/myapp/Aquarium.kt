@@ -12,18 +12,8 @@ open class Aquarium(open var length: Int = 100, open var width: Int = 20, open v
     open var water: Double = 0.0
         get() = volume * 0.9
 
-//    var length: Int = length
-//    var width: Int = width
-//    var height: Int = height
-
     init {
         println("aquarium initializing")
-    }
-
-    constructor(numberOfFish: Int) : this() {
-        // 2,000 cm^3 per fish + extra room so water so doesn't spill
-        val tank = numberOfFish * 2000 * 1.1
-        height = (tank / (length * width)).toInt()
     }
 
     fun printSize() {
