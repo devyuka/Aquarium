@@ -3,20 +3,22 @@ package example.myapp.decor
 data class Decoration(val rocks: String) {
 }
 
+data class Decoration2(val rocks: String, val wood: String, val diver: String) {
+}
+
 fun makeDecoration() {
-    val decoration1 = Decoration("granite")
-    println(decoration1)
+    val d5 = Decoration2("crystal", "wood", "diver")
+    println(d5)
 
-    val decoration2 = Decoration("slate")
-    println(decoration2)
+    // Assign all properties to variables.
+    val (rock, wood, diver) = d5
+    println(rock)
+    println(wood)
+    println(diver)
 
-    val decoration3 = Decoration("slate")
-    println(decoration3)
-
-    // fun equals() is the same as '==' operator.
-    // If wanting to compare the reference between two objects, use '==='
-    println(decoration1.equals(decoration2))
-    println(decoration3.equals(decoration2))
+    val (rock1, _, diver1) = d5
+    println(rock1)
+    println(diver1)
 }
 
 fun main() {
