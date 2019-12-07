@@ -1,6 +1,6 @@
 package example.myapp
 
-fun buildAquarium(){
+fun buildAquarium() {
     makeFish()
 
     val aquarium1 = Aquarium()
@@ -18,7 +18,7 @@ fun buildAquarium(){
     tower1.printSize()
 }
 
-fun makeFish(){
+fun makeFish() {
     val shark = Shark()
     val placo = Plecostomus()
 
