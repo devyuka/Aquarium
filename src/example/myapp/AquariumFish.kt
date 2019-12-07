@@ -1,11 +1,11 @@
 package example.myapp
 
-interface FishColor {
-    val color: String
-
-}
 interface FishAction {
     fun eat()
+}
+
+interface FishColor {
+    val color: String
 }
 
 class Plecostomus(fishColor: FishColor = GoldColor):
@@ -17,10 +17,6 @@ class Shark: FishAction, FishColor {
     override fun eat() {
         println("hunt and eat fish")
     }
-}
-
-object GoldColor : FishColor {
-    override val color = "gold"
 }
 
 class PrintingFishAction(private val food: String) : FishAction {
